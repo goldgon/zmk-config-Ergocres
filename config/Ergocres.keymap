@@ -28,7 +28,37 @@
 
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos { compatible = "zmk,combos"; 
+
+        lang {
+            bindings = <&kp GRAVE>;
+            key-positions = <2 4>;
+            layers = <0>;
+            timeout-ms = <200>;
+        };
+
+        fopen {
+            bindings = <&kp LG(N2)>;
+            key-positions = <6 10>;
+            layers = <0>;
+            timeout-ms = <200>;
+        };
+
+       bootloader_R {
+            bindings = <&bootloader>;
+            key-positions = <6 11 30 35>;
+            timeout-ms = <200>;
+        };
+
+       bootloader_L {
+            bindings = <&bootloader>;
+            key-positions = <0 5 36 41>;
+            timeout-ms = <200>;
+        };
+
+
+
+};
 
     macros {
         to_layer_0: to_layer_0 {
